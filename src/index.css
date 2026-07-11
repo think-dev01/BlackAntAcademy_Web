@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Anton", sans-serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+
+  --color-dark-bg: var(--dark-bg);
+  --color-dark-surface: var(--dark-surface);
+  --color-dark-surface-elevated: var(--dark-surface-elevated);
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-primary-hover: var(--brand-primary-hover);
+  --color-brand-primary-muted: var(--brand-primary-muted);
+  --color-brand-border: var(--brand-border);
+  --color-brand-gold: var(--brand-gold);
+}
+
+:root {
+  --dark-bg: #0A0A0B;
+  --dark-surface: #151517;
+  --dark-surface-elevated: #1F1F22;
+  --brand-primary: #E31B23;
+  --brand-primary-hover: #FF2A32;
+  --brand-primary-muted: #3D0F11;
+  --brand-border: #2A2A2E;
+  --text-main: #F5F5F4;
+  --brand-gold: #C9A227;
+}
+
+html.light {
+  --dark-bg: #FAFAF9;
+  --dark-surface: #FFFFFF;
+  --dark-surface-elevated: #F0F0EF;
+  --brand-primary: #C41118;
+  --brand-primary-hover: #A50E14;
+  --brand-primary-muted: #FBE4E5;
+  --brand-border: #E4E4E7;
+  --text-main: #0F0F10;
+  --brand-gold: #9C7A1A;
+}
+
+/* Base custom resets */
+html {
+  font-family: var(--font-sans);
+  background-color: var(--color-dark-bg);
+  color: var(--text-main);
+  scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light mode overrides for generic tailwind text classes to guarantee readability */
+html.light .text-white:not(.keep-white, button, button *, a.bg-brand-primary *, .bg-brand-primary, .bg-brand-primary *, .bg-emerald-500, .bg-emerald-500 *, .bg-emerald-600, .bg-emerald-600 *, .bg-zinc-800, .bg-zinc-800 *, .bg-zinc-900, .bg-zinc-900 *, .bg-black, .bg-black *, .bg-red-500, .bg-red-500 *, .bg-emerald-500 *, .bg-emerald-600 *, .bg-amber-500 *, .bg-orange-500 *, .bg-purple-500 *, .bg-teal-500 *, .bg-indigo-500 *),
+html.light .text-stone-100:not(.keep-white, button, button *, a.bg-brand-primary *, .bg-brand-primary, .bg-brand-primary *, .bg-emerald-500, .bg-emerald-500 *, .bg-emerald-600, .bg-emerald-600 *, .bg-zinc-800, .bg-zinc-800 *, .bg-zinc-900, .bg-zinc-900 *, .bg-black, .bg-black *, .bg-red-500, .bg-red-500 *, .bg-emerald-500 *, .bg-emerald-600 *, .bg-amber-500 *, .bg-orange-500 *, .bg-purple-500 *, .bg-teal-500 *, .bg-indigo-500 *),
+html.light .text-zinc-100:not(.keep-white, button, button *, a.bg-brand-primary *, .bg-brand-primary, .bg-brand-primary *, .bg-emerald-500, .bg-emerald-500 *, .bg-emerald-600, .bg-emerald-600 *, .bg-zinc-800, .bg-zinc-800 *, .bg-zinc-900, .bg-zinc-900 *, .bg-black, .bg-black *, .bg-red-500, .bg-red-500 *, .bg-emerald-500 *, .bg-emerald-600 *, .bg-amber-500 *, .bg-orange-500 *, .bg-purple-500 *, .bg-teal-500 *, .bg-indigo-500 *) {
+  color: #000000 !important;
+}
+
+html.light .text-stone-200:not(.keep-white, button, button *, a.bg-brand-primary *, .bg-brand-primary, .bg-brand-primary *, .bg-emerald-500, .bg-emerald-500 *, .bg-emerald-600, .bg-emerald-600 *, .bg-zinc-800, .bg-zinc-800 *, .bg-zinc-900, .bg-zinc-900 *, .bg-black, .bg-black *, .bg-red-500, .bg-red-500 *, .bg-emerald-500 *, .bg-emerald-600 *, .bg-amber-500 *, .bg-orange-500 *, .bg-purple-500 *, .bg-teal-500 *, .bg-indigo-500 *),
+html.light .text-zinc-200:not(.keep-white, button, button *, a.bg-brand-primary *, .bg-brand-primary, .bg-brand-primary *, .bg-emerald-500, .bg-emerald-500 *, .bg-emerald-600, .bg-emerald-600 *, .bg-zinc-800, .bg-zinc-800 *, .bg-zinc-900, .bg-zinc-900 *, .bg-black, .bg-black *, .bg-red-500, .bg-red-500 *, .bg-emerald-500 *, .bg-emerald-600 *, .bg-amber-500 *, .bg-orange-500 *, .bg-purple-500 *, .bg-teal-500 *, .bg-indigo-500 *) {
+  color: #000000 !important;
+}
+
+html.light .text-stone-300:not(.keep-white, button, button *, a.bg-brand-primary *, .bg-brand-primary, .bg-brand-primary *, .bg-emerald-500, .bg-emerald-500 *, .bg-emerald-600, .bg-emerald-600 *, .bg-zinc-800, .bg-zinc-800 *, .bg-zinc-900, .bg-zinc-900 *, .bg-black, .bg-black *, .bg-red-500, .bg-red-500 *, .bg-emerald-500 *, .bg-emerald-600 *, .bg-amber-500 *, .bg-orange-500 *, .bg-purple-500 *, .bg-teal-500 *, .bg-indigo-500 *),
+html.light .text-zinc-300:not(.keep-white, button, button *, a.bg-brand-primary *, .bg-brand-primary, .bg-brand-primary *, .bg-emerald-500, .bg-emerald-500 *, .bg-emerald-600, .bg-emerald-600 *, .bg-zinc-800, .bg-zinc-800 *, .bg-zinc-900, .bg-zinc-900 *, .bg-black, .bg-black *, .bg-red-500, .bg-red-500 *, .bg-emerald-500 *, .bg-emerald-600 *, .bg-amber-500 *, .bg-orange-500 *, .bg-purple-500 *, .bg-teal-500 *, .bg-indigo-500 *) {
+  color: #09090B !important;
+}
+
+html.light .text-stone-400:not(.keep-white, button, button *, a.bg-brand-primary *, .bg-brand-primary, .bg-brand-primary *, .bg-emerald-500, .bg-emerald-500 *, .bg-emerald-600, .bg-emerald-600 *, .bg-zinc-800, .bg-zinc-800 *, .bg-zinc-900, .bg-zinc-900 *, .bg-black, .bg-black *, .bg-red-500, .bg-red-500 *, .bg-emerald-500 *, .bg-emerald-600 *, .bg-amber-500 *, .bg-orange-500 *, .bg-purple-500 *, .bg-teal-500 *, .bg-indigo-500 *),
+html.light .text-zinc-400:not(.keep-white, button, button *, a.bg-brand-primary *, .bg-brand-primary, .bg-brand-primary *, .bg-emerald-500, .bg-emerald-500 *, .bg-emerald-600, .bg-emerald-600 *, .bg-zinc-800, .bg-zinc-800 *, .bg-zinc-900, .bg-zinc-900 *, .bg-black, .bg-black *, .bg-red-500, .bg-red-500 *, .bg-emerald-500 *, .bg-emerald-600 *, .bg-amber-500 *, .bg-orange-500 *, .bg-purple-500 *, .bg-teal-500 *, .bg-indigo-500 *) {
+  color: #111113 !important;
+}
+
+html.light .text-stone-500:not(.keep-white, button, button *, a.bg-brand-primary *, .bg-brand-primary, .bg-brand-primary *, .bg-emerald-500, .bg-emerald-500 *, .bg-emerald-600, .bg-emerald-600 *, .bg-zinc-800, .bg-zinc-800 *, .bg-zinc-900, .bg-zinc-900 *, .bg-black, .bg-black *, .bg-red-500, .bg-red-500 *, .bg-emerald-500 *, .bg-emerald-600 *, .bg-amber-500 *, .bg-orange-500 *, .bg-purple-500 *, .bg-teal-500 *, .bg-indigo-500 *),
+html.light .text-zinc-500:not(.keep-white, button, button *, a.bg-brand-primary *, .bg-brand-primary, .bg-brand-primary *, .bg-emerald-500, .bg-emerald-500 *, .bg-emerald-600, .bg-emerald-600 *, .bg-zinc-800, .bg-zinc-800 *, .bg-zinc-900, .bg-zinc-900 *, .bg-black, .bg-black *, .bg-red-500, .bg-red-500 *, .bg-emerald-500 *, .bg-emerald-600 *, .bg-amber-500 *, .bg-orange-500 *, .bg-purple-500 *, .bg-teal-500 *, .bg-indigo-500 *) {
+  color: #18181B !important;
+}
+
+html.light .text-stone-600:not(.keep-white, button, button *, a.bg-brand-primary *, .bg-brand-primary, .bg-brand-primary *, .bg-emerald-500, .bg-emerald-500 *, .bg-emerald-600, .bg-emerald-600 *, .bg-zinc-800, .bg-zinc-800 *, .bg-zinc-900, .bg-zinc-900 *, .bg-black, .bg-black *, .bg-red-500, .bg-red-500 *, .bg-emerald-500 *, .bg-emerald-600 *, .bg-amber-500 *, .bg-orange-500 *, .bg-purple-500 *, .bg-teal-500 *, .bg-indigo-500 *),
+html.light .text-zinc-600:not(.keep-white, button, button *, a.bg-brand-primary *, .bg-brand-primary, .bg-brand-primary *, .bg-emerald-500, .bg-emerald-500 *, .bg-emerald-600, .bg-emerald-600 *, .bg-zinc-800, .bg-zinc-800 *, .bg-zinc-900, .bg-zinc-900 *, .bg-black, .bg-black *, .bg-red-500, .bg-red-500 *, .bg-emerald-500 *, .bg-emerald-600 *, .bg-amber-500 *, .bg-orange-500 *, .bg-purple-500 *, .bg-teal-500 *, .bg-indigo-500 *) {
+  color: #27272A !important;
+}
+
+/* Specific color adjustments for labels and highlights inside light mode to guarantee high contrast */
+html.light .text-amber-500 {
+  color: #B45309 !important;
+}
+html.light .text-orange-500 {
+  color: #C2410C !important;
+}
+html.light .text-red-500 {
+  color: #B91C1C !important;
+}
+html.light .text-purple-500 {
+  color: #7E22CE !important;
+}
+html.light .text-teal-500 {
+  color: #0F766E !important;
+}
+html.light .text-indigo-500 {
+  color: #4338CA !important;
+}
+html.light .text-emerald-500 {
+  color: #047857 !important;
+}
+
+/* High contrast button text and icons in Light Mode for buttons with light backgrounds */
+html.light button.bg-dark-surface,
+html.light button.bg-dark-surface-elevated,
+html.light .bg-dark-surface button:not(.bg-brand-primary, .bg-emerald-500, .bg-emerald-600, .bg-red-500),
+html.light .bg-dark-surface-elevated button:not(.bg-brand-primary, .bg-emerald-500, .bg-emerald-600, .bg-red-500),
+html.light .bg-dark-surface button.bg-transparent,
+html.light .bg-dark-bg button.bg-transparent,
+html.light .bg-dark-surface-elevated button.bg-transparent,
+html.light a button.bg-dark-surface,
+html.light a button.bg-dark-surface-elevated {
+  color: #18181B !important;
+}
+
+html.light button.bg-dark-surface *,
+html.light button.bg-dark-surface-elevated *,
+html.light .bg-dark-surface button:not(.bg-brand-primary, .bg-emerald-500, .bg-emerald-600, .bg-red-500) *,
+html.light .bg-dark-surface-elevated button:not(.bg-brand-primary, .bg-emerald-500, .bg-emerald-600, .bg-red-500) *,
+html.light .bg-dark-surface button.bg-transparent *,
+html.light .bg-dark-bg button.bg-transparent *,
+html.light .bg-dark-surface-elevated button.bg-transparent *,
+html.light a button.bg-dark-surface *,
+html.light a button.bg-dark-surface-elevated * {
+  color: #18181B !important;
+}
+
+/* Ensure hovered state keeps white text when turning into brand primary */
+html.light button.hover\:bg-brand-primary:hover,
+html.light button.hover\:bg-brand-primary:hover * {
+  color: #FFFFFF !important;
+}
+
+/* Light mode custom elements */
+html.light input,
+html.light textarea,
+html.light select,
+html.light option {
+  color: #09090B !important;
+  background-color: var(--dark-surface-elevated) !important;
+}
+
+html.light ::placeholder {
+  color: #71717A !important;
+}
+
+/* Light mode custom borders and hover overrides */
+html.light .border-brand-border {
+  border-color: var(--brand-border) !important;
+}
+
+html.light .border-zinc-800,
+html.light .border-zinc-700,
+html.light .border-zinc-800\/40,
+html.light .border-zinc-800\/50,
+html.light .border-brand-border\/40 {
+  border-color: var(--brand-border) !important;
+}
+
+html.light .hover\:text-white:hover {
+  color: #E31B23 !important;
+}
+
+html.light .hover\:bg-zinc-800:hover,
+html.light .hover\:bg-zinc-900:hover {
+  background-color: var(--dark-surface-elevated) !important;
+}
+
+html.light .bg-zinc-900\/40 {
+  background-color: rgba(228, 228, 231, 0.4) !important;
+}
+
+html.light .bg-red-950\/40 {
+  background-color: rgba(239, 68, 68, 0.1) !important;
+  border-color: rgba(239, 68, 68, 0.3) !important;
+}
+
+html.light .bg-emerald-950\/40 {
+  background-color: rgba(16, 185, 129, 0.1) !important;
+  border-color: rgba(16, 185, 129, 0.3) !important;
+}
+
+html.light .bg-zinc-900\/10 {
+  background-color: rgba(24, 24, 27, 0.05) !important;
+}
+
+html.light .hover\:bg-zinc-800\/20:hover {
+  background-color: rgba(24, 24, 27, 0.05) !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-dark-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-primary);
+}

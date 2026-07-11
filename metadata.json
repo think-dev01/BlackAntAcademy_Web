@@ -1,0 +1,6 @@
+{
+  "name": "Black Ant Academy",
+  "description": "Website multi-page resmi Black Ant Academy MMA & Fitness Sidoarjo. Menampilkan info program, jadwal kelas, tarif membership, dan registrasi trial class.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
